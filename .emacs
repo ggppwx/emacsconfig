@@ -1,3 +1,15 @@
+;; packages used in this config --------
+;; plugins installed by package:
+;; helm
+;; company 
+;; highlight-symbol
+;; nlumn-hl
+;; xquery-mode
+;; web-mode
+;; helm-git-grep
+;; js2-mode
+
+
 (require 'package)
 (package-initialize)
 
@@ -24,6 +36,20 @@
 (add-to-list 'auto-mode-alist '("\\.xq\\'" . xquery-mode))
 (setq-default xquery-indent-size 4)
 
+;; web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;; js2-mode
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js?\\'" . js2-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
